@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Registration Form</title>
+</head>
+<body>
+
+    <h1>Course Registration Form</h1>
+
+    <form>
+
+        <!-- Grouping form fields -->
+        <fieldset>
+            <legend>Student Information</legend>
+
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="course">Select Course:</label><br>
+            <select id="course" name="course">
+                <option value="">--Choose a Course--</option>
+                <option value="webdev">Web Development</option>
+                <option value="datasci">Data Science</option>
+                <option value="ai">Artificial Intelligence</option>
+                <option value="cyber">Cyber Security</option>
+            </select>
+        </fieldset>
+
+        <br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Register">
+
+    </form>
+
+    <br><br>
+
+    <!-- Course Schedule Table -->
+    <h2>Available Course Schedules</h2>
+
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+            <th>Course</th>
+            <th>Day</th>
+            <th>Time</th>
+            <th>Instructor</th>
+        </tr>
+        <tr>
+            <td>Web Development</td>
+            <td>Monday & Wednesday</td>
+            <td>10:00 AM - 12:00 PM</td>
+            <td>Mr. Sharma</td>
+        </tr>
+        <tr>
+            <td>Data Science</td>
+            <td>Tuesday & Thursday</td>
+            <td>2:00 PM - 4:00 PM</td>
+            <td>Dr. Mehta</td>
+        </tr>
+        <tr>
+            <td>Artificial Intelligence</td>
+            <td>Saturday</td>
+            <td>11:00 AM - 3:00 PM</td>
+            <td>Prof. Reddy</td>
+        </tr>
+        <tr>
+            <td>Cyber Security</td>
+            <td>Friday</td>
+            <td>1:00 PM - 5:00 PM</td>
+            <td>Ms. Kapoor</td>
+        </tr>
+    </table>
+
+</body>
+</html>
