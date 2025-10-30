@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embed Google Map</title>
+</head>
+<body>
+    <!-- Question 2: Embed a Google Map -->
+    <h1>My City Map</h1>
+    
+    <!-- 
+        Using an iframe to embed Google Maps.
+        Attributes:
+        - title: describes the iframe content for accessibility
+        - width & height: set as percentages for responsiveness
+        - loading="lazy": defers loading the iframe until it is near the viewport for better performance
+    -->
+    
+    <div style="width: 80%; height: 50%; margin: 0 auto;">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31569.123456789!2d77.123456!3d28.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x123456789abcdef!2sYour%20City!5e0!3m2!1sen!2sin!4v1234567890"
+            title="Map showing my city"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </div>
+
+    <p>Resize the browser to see the map adjust automatically.</p>
+</body>
+</html>

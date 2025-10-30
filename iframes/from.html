@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+</head>
+<body>
+    <!-- Question: Form with iframe -->
+    <h1>Simple Form</h1>
+
+    <!-- Form targeting the iframe -->
+    <form action="result.html" method="get" target="resultFrame">
+        <label for="inputText">Enter Something:</label><br>
+        <input type="text" id="inputText" name="inputText" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Iframe to display result.html -->
+    <h2>Result:</h2>
+    <iframe name="resultFrame" width="100%" height="100" style="border:1px solid #000;"></iframe>
+</body>
+</html>
