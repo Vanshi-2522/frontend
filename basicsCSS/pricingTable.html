@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans</title>
+    <style>
+        /* Base styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 2rem;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        /* Container for pricing plans */
+        .pricing-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap; /* Allows wrapping on small screens */
+        }
+
+        /* Individual plan box */
+        .plan {
+            flex: 1 1 calc(33.333% - 1.33rem);
+            background-color: white;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s, background-color 0.3s;
+            min-height: 400px; /* Equal height */
+        }
+
+        .plan:hover {
+            transform: scale(1.05);
+            background-color: #f0f8ff;
+        }
+
+        /* Plan headings */
+        .plan h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Feature list */
+        .plan ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        .plan ul li {
+            margin: 0.8rem 0;
+            font-size: 1rem;
+        }
+
+        /* Price section */
+        .price {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Button */
+        .plan a {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: #2c3e50;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .plan a:hover {
+            background-color: #f39c12;
+            transform: scale(1.05);
+        }
+
+        /* Highlight most popular plan */
+        .popular {
+            border: 3px solid #f39c12;
+            background-color: #fffbe6;
+        }
+
+        /* Responsive layout */
+        @media screen and (max-width: 768px) {
+            .plan {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Our Pricing Plans</h2>
+
+    <div class="pricing-container">
+        <!-- Basic Plan -->
+        <div class="plan">
+            <h3>Basic</h3>
+            <ul>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+            </ul>
+            <div class="price">$19/mo</div>
+            <a href="#">Choose Plan</a>
+        </div>
+
+        <!-- Standard Plan (Popular) -->
+        <div class="plan popular">
+            <h3>Standard</h3>
+            <ul>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+                <li>Feature 4</li>
+            </ul>
+            <div class="price">$49/mo</div>
+            <a href="#">Choose Plan</a>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="plan">
+            <h3>Premium</h3>
+            <ul>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+                <li>Feature 4</li>
+                <li>Feature 5</li>
+            </ul>
+            <div class="price">$99/mo</div>
+            <a href="#">Choose Plan</a>
+        </div>
+    </div>
+
+</body>
+</html>

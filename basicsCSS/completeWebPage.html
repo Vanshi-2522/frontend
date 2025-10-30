@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastering Box Model & Positioning</title>
+    <style>
+        /* Base styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(52, 152, 219, 0.9);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 2px solid rgba(0,0,0,0.2);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero section */
+        .hero {
+            position: relative;
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://via.placeholder.com/1600x900') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            background-color: rgba(0,0,0,0.4);
+            padding: 1rem 2rem;
+            border-radius: 10px;
+        }
+
+        /* About section */
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 4rem 2rem;
+            background-color: #ecf0f1;
+            gap: 2rem;
+        }
+        .about .text, .about .image {
+            flex: 1 1 300px;
+        }
+        .about img {
+            width: 100%;
+            border: 5px solid #3498db;
+            border-radius: 10px;
+            outline: 3px dashed rgba(52,152,219,0.5);
+        }
+
+        /* Services section */
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 4rem 2rem;
+            background-color: #fff;
+            gap: 2rem;
+        }
+        .service-box {
+            flex: 1 1 250px;
+            padding: 2rem;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .service-box:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact section */
+        .contact {
+            padding: 4rem 2rem;
+            background-color: #ecf0f1;
+            display: flex;
+            justify-content: center;
+        }
+        .contact form {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        .contact label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1.2rem;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            outline: none;
+        }
+        .contact input:focus, .contact textarea:focus {
+            border-color: #2980b9;
+        }
+        .contact button {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .contact button:hover {
+            transform: scale(1.05);
+            background-color: #2980b9;
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(52, 152, 219, 0.9);
+            color: white;
+            text-align: center;
+            padding: 1rem 2rem;
+            border-top: 2px solid rgba(0,0,0,0.2);
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 900px) {
+            .about {
+                flex-direction: column;
+            }
+            .services {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">MyWebsite</div>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="hero">
+        <h1>Welcome to My Website</h1>
+    </section>
+
+    <section class="about" id="about">
+        <div class="text">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet arcu vel odio 
+            laoreet ultrices. Vivamus at sem nec magna convallis mollis.</p>
+            <p>Curabitur facilisis nulla non sapien ultrices, a efficitur sapien dapibus.</p>
+        </div>
+        <div class="image">
+            <img src="https://via.placeholder.com/400x300" alt="About Image">
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="service-box">
+            <h3>Web Design</h3>
+            <p>Beautiful and responsive websites using modern technologies.</p>
+        </div>
+        <div class="service-box">
+            <h3>SEO Optimization</h3>
+            <p>Improve your website visibility on search engines.</p>
+        </div>
+        <div class="service-box">
+            <h3>Support</h3>
+            <p>24/7 support to keep your website running smoothly.</p>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <form>
+            <h2>Contact Us</h2>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your Message"></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2025 MyWebsite. All rights reserved.
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine Layout</title>
+    <style>
+        /* Base styling */
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f5f5dc;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background-color: #fffaf0;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        /* Heading spanning all columns */
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            column-span: all;
+            -webkit-column-span: all; /* for Safari */
+        }
+
+        /* Multi-column text */
+        .columns {
+            column-count: 3;
+            column-gap: 2rem;
+            column-rule: 1px solid #ccc;
+            text-align: justify;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Image floated in text */
+        .columns img {
+            float: left;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+            width: 150px;
+            border-radius: 5px;
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 900px) {
+            .columns {
+                column-count: 2;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .columns {
+                column-count: 1;
+            }
+            .columns img {
+                float: none;
+                display: block;
+                margin: 0 auto 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Discover the Wonders of Nature</h1>
+        <div class="columns">
+            <img src="https://via.placeholder.com/150" alt="Nature Image">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl 
+                condimentum ultrices. Praesent fermentum, metus id dignissim malesuada, velit magna 
+                interdum lacus, nec tincidunt purus urna a augue. Suspendisse potenti. Nullam et 
+                ullamcorper mauris. 
+            </p>
+            <p>
+                Curabitur euismod, nisl eget facilisis sollicitudin, lorem erat bibendum ligula, 
+                et dapibus enim magna in ligula. Sed at sapien id lectus congue dictum. In ac 
+                libero vitae enim sollicitudin tincidunt. Vivamus pharetra, augue sit amet 
+                malesuada gravida, metus orci faucibus leo, et facilisis nunc erat ut nisi.
+            </p>
+            <p>
+                Fusce hendrerit lorem a nibh laoreet, ac porta lectus eleifend. Integer faucibus 
+                metus sed sapien efficitur, sed laoreet eros ultricies. Proin at sem non purus 
+                ultricies scelerisque. Suspendisse potenti. Sed in felis magna. Praesent nec 
+                lacus at magna volutpat efficitur.
+            </p>
+            <p>
+                Etiam rhoncus, tortor non facilisis commodo, massa lacus consequat odio, a 
+                dignissim sapien nisl non felis. Pellentesque habitant morbi tristique senectus 
+                et netus et malesuada fames ac turpis egestas.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Destination - Santorini</title>
+    <style>
+        /* Reset and base styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 2rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav a {
+            margin-left: 2rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #f39c12;
+        }
+
+        /* Spacer to offset fixed header */
+        .spacer {
+            height: 70px;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 20px;
+            color: white;
+            text-align: center;
+        }
+
+        /* Hero Section with parallax background */
+        .hero {
+            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        /* About Section with linear gradient */
+        .about {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+        }
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .about p {
+            font-size: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Attractions Section with radial gradient */
+        .attractions {
+            background: radial-gradient(circle, #ff7e5f, #feb47b);
+            color: #333;
+        }
+        .attractions h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .attractions p {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Gallery Section with parallax */
+        .gallery {
+            background-image: url('https://images.unsplash.com/photo-1526772662000-3f88f10405ff');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .gallery h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .gallery p {
+            font-size: 1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 0;
+        }
+
+        /* Borders for sections */
+        section:not(.hero) {
+            border-top: 5px solid white;
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .about h2, .gallery h2, .attractions h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Santorini</div>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#attractions">Attractions</a>
+            <a href="#gallery">Gallery</a>
+        </nav>
+    </header>
+
+    <!-- Spacer for fixed header -->
+    <div class="spacer"></div>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero" id="hero">
+            <h1>Welcome to Santorini</h1>
+            <p>The most beautiful island in Greece, famous for its sunsets and white-washed buildings.</p>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <h2>About Santorini</h2>
+            <p>Santorini is a volcanic island in the Cyclades group of the Greek islands. Its stunning cliffs, blue-domed churches, and crystal-clear waters attract visitors from around the world. The island combines rich history, culture, and breathtaking natural beauty.</p>
+        </section>
+
+        <!-- Attractions Section -->
+        <section class="attractions" id="attractions">
+            <h2>Main Attractions</h2>
+            <p>Explore the charming villages of Oia and Fira, enjoy traditional Greek cuisine, relax on unique beaches with black and red sand, and discover ancient ruins that tell the story of this remarkable island.</p>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery" id="gallery">
+            <h2>Photo Gallery</h2>
+            <p>Experience the beauty through pictures — from sunsets over the caldera to the iconic white buildings with blue roofs.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Santorini Tourism. All rights reserved.
+    </footer>
+
+</body>
+</html>
