@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: background-color 0.3s;
+        }
+
+        header nav a:hover {
+            background-color: rgba(255,255,255,0.2);
+            border-radius: 5px;
+        }
+
+        /* Main Section */
+        main {
+            flex: 1; /* so footer stays at bottom */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            padding: 40px 20px;
+            flex-wrap: wrap; /* responsive wrap */
+        }
+
+        .box {
+            background-color: #f4f4f4;
+            padding: 40px;
+            width: 250px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .box:hover {
+            transform: rotate(2deg);
+        }
+
+        .box h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .box p {
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 900px) {
+            main {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            main {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="box" id="services">
+            <h2>Services</h2>
+            <p>We provide web design and development services tailored to your needs.</p>
+        </div>
+        <div class="box" id="projects">
+            <h2>Projects</h2>
+            <p>Explore our portfolio showcasing our latest work and creative projects.</p>
+        </div>
+        <div class="box" id="contact">
+            <h2>Contact</h2>
+            <p>Get in touch with us for inquiries, support, or collaboration opportunities.</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Vanshika Gupta. All rights reserved.
+    </footer>
+
+</body>
+</html>

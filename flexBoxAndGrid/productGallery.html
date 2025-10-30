@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        /* Grid container */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        /* Product cards */
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s;
+            height: 200px; /* Equal height */
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .price {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Responsive design */
+        @media screen and (max-width: 1024px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Product Gallery</h1>
+
+    <div class="gallery">
+        <div class="card">
+            <div class="product-name">Product 1</div>
+            <div class="price">$10.00</div>
+        </div>
+        <div class="card">
+            <div class="product-name">Product 2</div>
+            <div class="price">$15.00</div>
+        </div>
+        <div class="card">
+            <div class="product-name">Product 3</div>
+            <div class="price">$20.00</div>
+        </div>
+        <div class="card">
+            <div class="product-name">Product 4</div>
+            <div class="price">$12.00</div>
+        </div>
+        <div class="card">
+            <div class="product-name">Product 5</div>
+            <div class="price">$18.00</div>
+        </div>
+        <div class="card">
+            <div class="product-name">Product 6</div>
+            <div class="price">$22.00</div>
+        </div>
+        <div cl
