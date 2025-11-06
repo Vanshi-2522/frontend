@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Transformations Showcase</title>
+
+  <style>
+    /* ===== Global Styles ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      max-width: 600px;
+      margin: 0 auto;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    /* ===== Flexbox Container for Boxes ===== */
+    .transform-container {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    /* ===== Box Styles ===== */
+    .box {
+      width: 150px;
+      height: 150px;
+      background-color: #3498db;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 12px;
+      color: #fff;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.4s ease;
+    }
+
+    /* ===== Transformations on Hover ===== */
+    .rotate:hover {
+      transform: rotate(20deg);
+      background-color: #e74c3c;
+    }
+
+    .scale:hover {
+      transform: scale(1.2);
+      background-color: #2ecc71;
+    }
+
+    .translate:hover {
+      transform: translate(20px, -20px);
+      background-color: #f39c12;
+    }
+
+    .skew:hover {
+      transform: skew(20deg, 10deg);
+      background-color: #9b59b6;
+    }
+
+    /* ===== Labels under Boxes ===== */
+    .box-label {
+      text-align: center;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* ===== Responsive Design ===== */
+    @media (max-width: 700px) {
+      .transform-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>CSS Transformations Showcase</h1>
+    <p>
+      Hover over each box to see different CSS transformations in action: <strong>rotate()</strong>, <strong>scale()</strong>, <strong>translate()</strong>, and <strong>skew()</strong>.
+    </p>
+  </header>
+
+  <main>
+    <section class="transform-container">
+      <!-- Rotate Box -->
+      <div>
+        <div class="box rotate">Rotate</div>
+        <div class="box-label">rotate()</div>
+      </div>
+
+      <!-- Scale Box -->
+      <div>
+        <div class="box scale">Scale</div>
+        <div class="box-label">scale()</div>
+      </div>
+
+      <!-- Translate Box -->
+      <div>
+        <div class="box translate">Translate</div>
+        <div class="box-label">translate()</div>
+      </div>
+
+      <!-- Skew Box -->
+      <div>
+        <div class="box skew">Skew</div>
+        <div class="box-label">skew()</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Height and Width Practice Layout</title>
+
+  <style>
+    /* ===== Global Styles ===== */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    header {
+      margin-bottom: 1.5rem;
+    }
+
+    header h1 {
+      color: #2c3e50;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* ===== Flexbox Container for Boxes ===== */
+    .box-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      width: 90%;
+      max-width: 1000px;
+    }
+
+    /* ===== Shared Box Styles ===== */
+    .box {
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: auto; /* Demonstrate overflow handling */
+      padding: 0.5rem;
+      font-size: 1em;
+      transition: transform 0.3s ease;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+    }
+
+    /* ===== Box 1: Fixed height/width in px ===== */
+    .box1 {
+      background-color: #3498db;
+      width: 200px;
+      height: 150px;
+    }
+
+    /* ===== Box 2: Responsive width with % and min-height ===== */
+    .box2 {
+      background-color: #e67e22;
+      width: 40%;
+      min-height: 100px;
+      max-width: 350px;
+    }
+
+    /* ===== Box 3: Using vh, em, and overflow example ===== */
+    .box3 {
+      background-color: #27ae60;
+      width: 20em;   /* width based on font size */
+      height: 30vh;  /* height based on viewport height */
+      max-width: 90%;
+      overflow: auto;
+    }
+
+    footer {
+      margin-top: 2rem;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    /* ===== Responsive Design ===== */
+    @media (max-width: 700px) {
+      .box-container {
+        flex-direction: column;
+      }
+
+      .box2 {
+        width: 80%;
+      }
+
+      .box3 {
+        width: 90%;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Height and Width Practice Layout</h1>
+    <p>
+      This page demonstrates different sizing units (<code>px</code>, <code>%</code>, <code>vh</code>, and <code>em</code>), 
+      along with <strong>min-height</strong>, <strong>max-width</strong>, and <strong>overflow</strong> behavior.
+    </p>
+  </header>
+
+  <main>
+    <section class="box-container">
+      <!-- Box 1: Fixed width/height -->
+      <div class="box box1">
+        <p><strong>Box 1:</strong><br>200px × 150px<br>(Fixed size)</p>
+      </div>
+
+      <!-- Box 2: Percentage width + min-height -->
+      <div class="box box2">
+        <p><strong>Box 2:</strong><br>Width: 40%<br>Min-Height: 100px<br>Max-Width: 350px</p>
+      </div>
+
+      <!-- Box 3: Viewport + EM Units -->
+      <div class="box box3">
+        <p>
+          <strong>Box 3:</strong><br>
+          Width: 20em<br>
+          Height: 30vh<br>
+          Overflow enabled.<br><br>
+          This box uses <code>overflow: auto;</code> to show scrollbars when the content exceeds the height of the box. 
+          Try resizing your browser window or adding more text to see the scrollbars appear!
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created by [Your Name] | Height & Width Practice</p>
+  </footer>
+</body>
+</html>

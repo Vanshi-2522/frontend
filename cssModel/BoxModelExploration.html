@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Model Exploration</title>
+  <style>
+    * {
+      box-sizing: content-box; /* Default for first example */
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .box-model-container {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .box {
+      position: relative;
+      width: 150px;
+      height: 100px;
+      background-color: #ffcccb; /* Content */
+      border: 4px solid #ff6f61; /* Border */
+      padding: 20px; /* Padding */
+      margin: 20px; /* Margin */
+      text-align: center;
+      line-height: 100px;
+      font-weight: bold;
+    }
+
+    .border-box .box {
+      box-sizing: border-box;
+      background-color: #cce5ff;
+      border-color: #4da6ff;
+    }
+
+    .description {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #555;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Box Model Exploration</h1>
+
+  <div class="box-model-container">
+    <!-- Default box-sizing -->
+    <div>
+      <div class="box">Content-box</div>
+      <div class="description">Default box-sizing: content-box</div>
+    </div>
+
+    <!-- Border-box -->
+    <div class="border-box">
+      <div class="box">Border-box</div>
+      <div class="description">box-sizing: border-box</div>
+    </div>
+  </div>
+</body>
+</html>

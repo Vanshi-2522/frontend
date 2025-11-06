@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Bar with Transitions</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    nav {
+      background-color: #4da6ff;
+      display: flex;
+      justify-content: center;
+      padding: 1rem 0;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.7rem 1.2rem;
+      margin: 0.2rem;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+
+    nav a:hover {
+      background-color: #1a8cff;
+      border-color: #fff;
+    }
+
+    nav a.active {
+      background-color: #fff;
+      color: #4da6ff;
+      border-color: #1a8cff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #eee;
+      margin-top: 2rem;
+      color: #555;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav a {
+        width: 80%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#" class="active">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <footer>
+    &copy; 2025 Your Company. All rights reserved.
+  </footer>
+
+</body>
+</html>

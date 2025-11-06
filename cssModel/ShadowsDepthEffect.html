@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shadows and Depth Effect Layout</title>
+
+  <style>
+    /* ===== Global Styles ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Text shadow for depth */
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    /* ===== Flexbox Container for Cards ===== */
+    .card-container {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ===== Card Styles ===== */
+    .card {
+      background-color: #fff;
+      width: 250px;
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Different initial box-shadow styles for depth effect */
+    .card1 {
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .card2 {
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .card3 {
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    /* Hover effect: lift card with larger shadow */
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    }
+
+    /* Card content */
+    .card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      object-fit: cover;
+    }
+
+    .card h2 {
+      margin-bottom: 0.5rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2); /* Heading text shadow */
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 800px) {
+      .card-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Shadows and Depth Effect Layout</h1>
+    <p>
+      This layout demonstrates different <strong>box-shadow</strong> and <strong>text-shadow</strong> effects.
+      Hover over each card to see it lift up with a smooth animation.
+    </p>
+  </header>
+
+  <main>
+    <section class="card-container">
+      <!-- Card 1 -->
+      <div class="card card1">
+        <img src="https://via.placeholder.com/80" alt="Profile 1">
+        <h2>Jane Doe</h2>
+        <p>Frontend Developer passionate about creating clean and interactive user interfaces.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card card2">
+        <img src="https://via.placeholder.com/80" alt="Profile 2">
+        <h2>John Smith</h2>
+        <p>UI/UX Designer focused on delivering intuitive and beautiful designs for all platforms.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card card3">
+        <img src="https://via.placeholder.com/80" alt="Profile 3">
+        <h2>Emily Lee</h2>
+        <p>Full Stack Developer who enjoys turning ideas into fully functional web applications.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer style="margin-top:2rem; color:#777; text-align:center;">
+    Created by [Your Name] | Shadows & Depth Demo
+  </footer>
+</body>
+</html>
+
