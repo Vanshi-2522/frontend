@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Showcase Layout</title>
+  <style>
+    /* ===== General Page Styling ===== */
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #2c3e50;
+      color: white;
+    }
+
+    h1 {
+      margin-bottom: 0.5rem;
+    }
+
+    main {
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* ===== Image Grid Layout ===== */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    figure {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      background-color: #fff;
+      margin: 0;
+    }
+
+    figure img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 10px;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    /* ===== Hover Effect (scale + dark overlay) ===== */
+    figure::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0);
+      transition: background 0.3s ease;
+      border-radius: 10px;
+    }
+
+    figure:hover::after {
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    figure:hover img {
+      transform: scale(1.1);
+      filter: brightness(85%);
+    }
+
+    figcaption {
+      text-align: center;
+      padding: 0.75rem;
+      background-color: #fff;
+      border-top: 1px solid #ddd;
+      border-radius: 0 0 10px 10px;
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #2c3e50;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    /* ===== Responsive Design ===== */
+    @media (max-width: 700px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Image Showcase Layout</h1>
+    <p>Hover over each image to see the zoom and overlay effect.</p>
+  </header>
+
+  <main>
+    <section class="gallery">
+      <figure>
+        <img src="https://via.placeholder.com/400x250?text=Image+1" alt="Image 1">
+        <figcaption>Beautiful Mountain View</figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://via.placeholder.com/400x250?text=Image+2" alt="Image 2">
+        <figcaption>Serene Lake Reflection</figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://via.placeholder.com/400x250?text=Image+3" alt="Image 3">
+        <figcaption>Sunset Over the Desert</figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://via.placeholder.com/400x250?text=Image+4" alt="Image 4">
+        <figcaption>Forest Pathway</figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://via.placeholder.com/400x250?text=Image+5" alt="Image 5">
+        <figcaption>City Skyline at Night</figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://via.placeholder.com/400x250?text=Image+6" alt="Image 6">
+        <figcaption>Peaceful Beach Morning</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created by Vanshika Gupta | Image Showcase Demonstration</p>
+  </footer>
+</body>
+</html>

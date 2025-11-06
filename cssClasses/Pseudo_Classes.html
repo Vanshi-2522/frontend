@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Classes Demonstration</title>
+
+    <style>
+        /* ===== General Styles ===== */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header, footer {
+            text-align: center;
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        /* ===== Flexbox Layout ===== */
+        .examples-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 1.5rem;
+        }
+
+        .example {
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            width: 220px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* ===== :hover Example ===== */
+        .hover-link {
+            display: inline-block;
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: bold;
+        }
+        .hover-link:hover {
+            color: #e74c3c;
+        }
+
+        /* ===== :focus Example ===== */
+        .focus-input {
+            padding: 0.5rem;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+        .focus-input:focus {
+            border-color: #27ae60;
+            outline: none;
+        }
+
+        /* ===== :active Example ===== */
+        .active-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .active-button:active {
+            background-color: #1abc9c;
+        }
+
+        /* ===== :nth-child Example ===== */
+        .nth-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .nth-list li {
+            padding: 0.5rem;
+            background-color: #ecf0f1;
+            margin: 0.2rem 0;
+            border-radius: 4px;
+        }
+        .nth-list li:nth-child(odd) {
+            background-color: #dff9fb;
+        }
+
+        /* ===== Responsive Design ===== */
+        @media (max-width: 768px) {
+            .examples-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Pseudo-Classes Demonstration</h1>
+        <p>Examples of <code>:hover</code>, <code>:focus</code>, <code>:active</code>, and <code>:nth-child()</code> pseudo-classes.</p>
+    </header>
+
+    <main>
+        <section class="examples-container">
+            
+            <!-- :hover example -->
+            <div class="example">
+                <h2>:hover</h2>
+                <a href="#" class="hover-link">Hover over this link</a>
+                <p>Changes color when the mouse hovers over it.</p>
+            </div>
+
+            <!-- :focus example -->
+            <div class="example">
+                <h2>:focus</h2>
+                <input type="text" class="focus-input" placeholder="Click or tab here">
+                <p>Border color changes when this input is focused.</p>
+            </div>
+
+            <!-- :active example -->
+            <div class="example">
+                <h2>:active</h2>
+                <button class="active-button">Click Me</button>
+                <p>Background changes when the button is being clicked.</p>
+            </div>
+
+            <!-- :nth-child() example -->
+            <div class="example">
+                <h2>:nth-child()</h2>
+                <ul class="nth-list">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                    <li>Item 4</li>
+                    <li>Item 5</li>
+                </ul>
+                <p>Every odd list item is styled differently using <code>:nth-child(odd)</code>.</p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by [Your Name] | HTML & CSS Demonstration</p>
+    </footer>
+</body>
+</html>
