@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Cards with Media Queries</title>
+
+  <style>
+    /* ------------------------------
+       Global Styles
+    ------------------------------ */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header, footer {
+      text-align: center;
+      background-color: #222;
+      color: #fff;
+      padding: 1rem 0;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    /* ------------------------------
+       Card Container
+    ------------------------------ */
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    /* ------------------------------
+       Card Style
+    ------------------------------ */
+    .card {
+      background-color: #fff;
+      flex: 1 1 calc(25% - 1.5rem);
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      text-align: center;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .card:hover {
+      background-color: #f5a623;
+      color: #fff;
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-bottom: 0.75rem;
+      color: #222;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* ------------------------------
+       Media Queries
+    ------------------------------ */
+    /* Tablet view: 2 columns */
+    @media (max-width: 900px) {
+      .card {
+        flex: 1 1 calc(50% - 1.5rem);
+      }
+    }
+
+    /* Mobile view: 1 column */
+    @media (max-width: 600px) {
+      .card {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>Responsive Cards with Media Queries</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="card-container">
+      <div class="card">
+        <h3>Card One</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ligula sed felis sagittis posuere.</p>
+      </div>
+      <div class="card">
+        <h3>Card Two</h3>
+        <p>Curabitur ac odio eget tortor accumsan tempor. Aliquam erat volutpat. Duis bibendum imperdiet lacus.</p>
+      </div>
+      <div class="card">
+        <h3>Card Three</h3>
+        <p>Phasellus id lorem ac orci porttitor ullamcorper. Cras viverra, elit at tincidunt tempor, nisl libero euismod.</p>
+      </div>
+      <div class="card">
+        <h3>Card Four</h3>
+        <p>Vivamus consequat lorem ac lorem bibendum, a imperdiet nulla porttitor. Duis tincidunt risus et urna egestas.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Responsive Cards Demo</p>
+  </footer>
+</body>
+</html>

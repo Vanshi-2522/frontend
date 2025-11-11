@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Typography</title>
+
+  <style>
+    /* ------------------------------
+       Global Styles
+    ------------------------------ */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    main {
+      max-width: 800px;
+      background-color: #fff;
+      padding: 3rem 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin: 1rem;
+    }
+
+    /* ------------------------------
+       Typography Styles
+    ------------------------------ */
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 3rem);
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    p {
+      font-size: clamp(1rem, 2vw, 1.5rem);
+      line-height: 1.6;
+      margin: 0 auto;
+      max-width: 600px;
+    }
+
+    /* ------------------------------
+       Responsive Adjustments
+    ------------------------------ */
+    @media (max-width: 700px) {
+      main {
+        padding: 2rem 1rem;
+      }
+
+      p {
+        line-height: 1.8;
+        letter-spacing: 0.3px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section>
+      <h1>Responsive Typography with clamp()</h1>
+      <p>
+        This example demonstrates how text can adapt smoothly across different screen sizes using relative units and the 
+        <code>clamp()</code> function. Resize your browser window to see how both the heading and paragraph scale dynamically 
+        for optimal readability on any device.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
