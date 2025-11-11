@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Image Filter Gallery</title>
+
+  <style>
+    /* ------------------------------
+       Global Styles
+    ------------------------------ */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f7f7f7;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header, footer {
+      text-align: center;
+      background-color: #222;
+      color: #fff;
+      padding: 1rem 0;
+    }
+
+    /* ------------------------------
+       Gallery Layout
+    ------------------------------ */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    figure {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    figure:hover {
+      transform: translateY(-5px);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: filter 0.4s ease;
+    }
+
+    /* ------------------------------
+       Filters for Each Image
+    ------------------------------ */
+    figure:nth-child(1) img { filter: blur(3px); }
+    figure:nth-child(2) img { filter: grayscale(100%); }
+    figure:nth-child(3) img { filter: sepia(100%); }
+    figure:nth-child(4) img { filter: brightness(0.7); }
+    figure:nth-child(5) img { filter: contrast(180%); }
+    figure:nth-child(6) img { filter: hue-rotate(90deg); }
+
+    /* Remove filter on hover */
+    figure:hover img {
+      filter: none;
+    }
+
+    /* ------------------------------
+       Captions
+    ------------------------------ */
+    figcaption {
+      padding: 0.75rem;
+      font-weight: bold;
+      background-color: #f0f0f0;
+    }
+
+    /* ------------------------------
+       Responsive Design
+    ------------------------------ */
+    @media (max-width: 600px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Responsive Image Filter Gallery</h1>
+  </header>
+
+  <main>
+    <section class="gallery">
+      <figure>
+        <img src="https://picsum.photos/id/1015/400/300" alt="Mountain View">
+        <figcaption>Blur Filter</figcaption>
+      </figure>
+      <figure>
+        <img src="https://picsum.photos/id/1025/400/300" alt="Dog Portrait">
+        <figcaption>Grayscale Filter</figcaption>
+      </figure>
+      <figure>
+        <img src="https://picsum.photos/id/1040/400/300" alt="Beach View">
+        <figcaption>Sepia Filter</figcaption>
+      </figure>
+      <figure>
+        <img src="https://picsum.photos/id/1062/400/300" alt="Forest Scene">
+        <figcaption>Brightness Filter</figcaption>
+      </figure>
+      <figure>
+        <img src="https://picsum.photos/id/1074/400/300" alt="City Lights">
+        <figcaption>Contrast Filter</figcaption>
+      </figure>
+      <figure>
+        <img src="https://picsum.photos/id/1084/400/300" alt="Sunset Colors">
+        <figcaption>Hue-Rotate Filter</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Responsive Gallery Demo</p>
+  </footer>
+</body>
+</html>
