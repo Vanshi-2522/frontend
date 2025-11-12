@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Tracker</title>
+
+  <!-- ✅ Bootstrap 5 CDN -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- ✅ Custom Styling -->
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .list-group-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="bg-dark text-white text-center py-4 mb-4">
+    <h1 class="fw-bold">
+      Task Tracker
+      <!-- Badge counter for pending tasks -->
+      <span class="badge bg-danger">5 Pending</span>
+    </h1>
+    <p class="lead mb-0">Stay organized and track your progress easily.</p>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="container mb-5">
+    <h2 class="fw-bold mb-3 text-center">Today's Tasks</h2>
+
+    <!-- ✅ Task List -->
+    <ul class="list-group shadow-sm">
+      <li class="list-group-item">
+        Finish Bootstrap Assignment
+        <span class="badge bg-danger">High</span>
+      </li>
+      <li class="list-group-item">
+        Review Client Feedback
+        <span class="badge bg-warning text-dark">Medium</span>
+      </li>
+      <li class="list-group-item">
+        Update Portfolio Website
+        <span class="badge bg-success">Low</span>
+      </li>
+      <li class="list-group-item">
+        Schedule Team Meeting
+        <span class="badge bg-warning text-dark">Medium</span>
+      </li>
+      <li class="list-group-item">
+        Check Project Deadlines
+        <span class="badge bg-danger">High</span>
+      </li>
+    </ul>
+
+    <!-- ===== COMPLETED BUTTON ===== -->
+    <div class="text-center mt-4">
+      <button class="btn btn-primary">
+        Completed
+        <span class="badge bg-light text-dark">2</span>
+      </button>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">&copy; 2025 Task Tracker App. All rights reserved.</p>
+  </footer>
+
+  <!-- ✅ Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

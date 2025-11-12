@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Themed Blog</title>
+
+  <!-- ✅ Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- ✅ Bootstrap 5 CDN -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- ✅ Custom Theme Overrides -->
+  <style>
+    :root {
+      /* 🎨 Custom Bootstrap Theme Variables */
+      --bs-primary: #ff6f61; /* Coral tone */
+      --bs-font-sans-serif: 'Poppins', sans-serif;
+    }
+
+    body {
+      font-family: var(--bs-font-sans-serif);
+      background-color: #fdfdfd;
+    }
+
+    header {
+      background-color: var(--bs-primary);
+      color: white;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+    }
+
+    .blog-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-primary {
+      background-color: var(--bs-primary);
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #e85c50;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="py-4 text-center">
+    <h1 class="fw-bold">My Creative Blog</h1>
+    <p class="lead mb-0">Insights, stories, and inspiration every week.</p>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="container my-5">
+    <div class="row g-4 justify-content-center">
+      
+      <!-- ===== Blog Post 1 ===== -->
+      <div class="col-12 col-md-6">
+        <div class="card blog-card h-100">
+          <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80"
+               class="card-img-top" alt="Blog Post 1">
+          <div class="card-body">
+            <h5 class="card-title text-primary fw-bold">The Future of Web Design</h5>
+            <p class="card-text">
+              Discover emerging trends shaping the next generation of websites and digital experiences.
+            </p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Blog Post 2 ===== -->
+      <div class="col-12 col-md-6">
+        <div class="card blog-card h-100">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+               class="card-img-top" alt="Blog Post 2">
+          <div class="card-body">
+            <h5 class="card-title text-primary fw-bold">Building a Personal Brand Online</h5>
+            <p class="card-text">
+              Learn how to stand out in a crowded digital space with authentic storytelling and design.
+            </p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="text-center py-3">
+    <p class="mb-0">&copy; 2025 My Creative Blog. Crafted with ❤️ using Bootstrap.</p>
+  </footer>
+
+  <!-- ✅ Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
